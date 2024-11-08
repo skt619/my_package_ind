@@ -1,0 +1,4816 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/cabinet/protos/Cabinet.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/master/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/master/projects/appearances/protos/BrushedAluminium.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Pavement.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Window.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/lights/protos/CeilingLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/PaintedWood.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/street_furniture/protos/TrashBin.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/chairs/protos/Chair.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/tables/protos/RoundTable.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/living_room_furniture/protos/Armchair.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/solids/protos/SolidBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/master/projects/appearances/protos/VarnishedPine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/computers/protos/Monitor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Roughcast.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Door.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/GenericDoorAppearance.proto"
+
+WorldInfo {
+  info [
+    "Sample of how the indoor objects can be placed"
+  ]
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation -0.47373004425811754 0.4075133939908872 0.780712929882188 1.958796002165839
+  position 1.804249026763502 -14.797348153402485 52.04352034700275
+  exposure 0.5
+}
+DEF FLOOR Solid {
+  children [
+    Shape {
+      appearance Pavement {
+        type "slate"
+        textureTransform TextureTransform {
+          scale 1000 1000
+        }
+      }
+      geometry DEF FLOOR_PLANE Plane {
+        size 30.3 18.3
+      }
+    }
+  ]
+  name "floor"
+  boundingObject USE FLOOR_PLANE
+  locked TRUE
+}
+DEF FLOOR Solid {
+  translation -10.16 -12.65 0
+  children [
+    Shape {
+      appearance Pavement {
+        type "slate"
+        textureTransform TextureTransform {
+          scale 1000 1000
+        }
+      }
+      geometry DEF FLOOR_PLANE Plane {
+        size 10 7
+      }
+    }
+  ]
+  name "floor(3)"
+  boundingObject USE FLOOR_PLANE
+}
+DEF FLOOR Solid {
+  translation -10.16 44.18 0
+  children [
+    Shape {
+      appearance Pavement {
+        type "slate"
+        textureTransform TextureTransform {
+          scale 1000 1000
+        }
+      }
+      geometry DEF FLOOR_PLANE Plane {
+        size 10 7
+      }
+    }
+  ]
+  name "floor(4)"
+  boundingObject USE FLOOR_PLANE
+}
+DEF FLOOR Solid {
+  translation 0 31.6 0
+  children [
+    Shape {
+      appearance Pavement {
+        type "slate"
+        textureTransform TextureTransform {
+          scale 1000 1000
+        }
+      }
+      geometry DEF FLOOR_PLANE Plane {
+        size 30.3 18.3
+      }
+    }
+  ]
+  name "floor(2)"
+  boundingObject USE FLOOR_PLANE
+  locked TRUE
+}
+DEF FLOOR Solid {
+  translation -4 15.8 0
+  children [
+    Shape {
+      appearance Pavement {
+        type "slate"
+        textureTransform TextureTransform {
+          scale 1000 1000
+        }
+      }
+      geometry DEF FLOOR_PLANE Plane {
+        size 38.3 13.3
+      }
+    }
+  ]
+  name "floor(1)"
+  boundingObject USE FLOOR_PLANE
+  locked TRUE
+}
+Monitor {
+  translation 0.15 9.41 0.75
+}
+Monitor {
+  translation -0.189995 9.46 0.75
+  rotation 0 0 1 3.1415
+  name "monitor(1)"
+}
+SolidBox {
+  translation 0 11.45 1
+  size 4 3 7
+  appearance PBRAppearance {
+    baseColor 0.2 0.2 0.2
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/worlds/textures/tagged_wall.jpg"
+      ]
+    }
+    transparency 0.05
+    roughness 0.5
+  }
+}
+Table {
+  translation 0 9.42 0
+  name "table(12)"
+  size 1.5 1 0.74
+  trayAppearance VarnishedPine {
+    colorOverride 0 0 0
+    textureTransform TextureTransform {
+      scale 10 10
+    }
+  }
+  legAppearance VarnishedPine {
+    colorOverride 0 0 0
+    textureTransform TextureTransform {
+      scale 4 5
+    }
+  }
+}
+RoundTable {
+  translation -13.12 -6.32 0
+}
+RoundTable {
+  translation -13.12 37.62 0
+  name "round table(1)"
+}
+RoundTable {
+  translation 12.68 37.9 0
+  name "round table(2)"
+}
+Armchair {
+  translation -14.2654 -8.10163 0
+  rotation 0 0 -1 -0.42920530717958627
+  color 0.4 0.4 0.4
+}
+Armchair {
+  translation -14.1049 39.4632 0
+  rotation 0 0 1 -0.35619530717958625
+  name "armchair(4)"
+  color 0.4 0.4 0.4
+}
+Armchair {
+  translation -14.3822 -4.44217 0
+  name "armchair(1)"
+  color 0.4 0.4 0.4
+}
+Armchair {
+  translation -14.3822 35.5278 0
+  name "armchair(3)"
+  color 0.4 0.4 0.4
+}
+Armchair {
+  translation 14.4878 36.4278 0
+  rotation 0 0 1 3.1415
+  name "armchair(6)"
+  color 0.4 0.4 0.4
+}
+Armchair {
+  translation 14.1109 39.3578 0
+  rotation 0 0 1 -2.6180853071795864
+  name "armchair(7)"
+  color 0.4 0.4 0.4
+}
+Armchair {
+  translation -7.27238 -8.53246 0
+  rotation 0 0 1 1.57075
+  name "armchair(2)"
+  color 0.4 0.4 0.4
+}
+Armchair {
+  translation -7.27034 39.7075 0
+  rotation 0 0 1 -1.57075
+  name "armchair(5)"
+  color 0.4 0.4 0.4
+}
+Chair {
+  translation 9.04 -7.56 0
+  color 0 0 0
+}
+Chair {
+  translation 5.35 -7.56 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 1.67 -7.56 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -1.67 -7.56 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -5.24 -7.56 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -5.24 38.79 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -1.62 38.79 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 1.72 38.79 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 5.41 38.79 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 9.05 38.79 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -5.24 39.64 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -1.55 39.64 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 1.68 39.64 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 5.39 39.64 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 9.01 39.64 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.15 -2.27 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.15 -1.48 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.15 1.15 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.15 2.06 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.15 5.23 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.15 43.31 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.15 34.61 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.15 29.78 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.15 26.45 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.15 33.74 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.15 30.67 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.15 27.28 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -21.27 14.25 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -21.27 17.24 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -21.27 19.02 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -21.27 12.61 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -21.27 15.68 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.15 44.23 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.15 45.21 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.15 4.38 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -8.06 -12.08 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.23 -12.08 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.23 -12.93 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -13.23 -13.86 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -8.06 -12.94 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -8.06 -13.89 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 1.67 -8.48 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -1.65 -8.48 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -5.34 -8.48 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 6.71 -7.56 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 3.16 -7.55983 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -0.1 -7.55962 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -3.92 -7.55933 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -3.91552 39.6207 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 6.78448 39.6205 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 10.4445 39.6198 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -0.15552 39.6205 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 3.21448 39.6204 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -3.91556 38.7707 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -0.17556 38.7706 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 3.22444 38.7704 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 6.84444 38.7704 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 10.3944 38.7701 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -6.60023 -12.0591 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.8002 -12.0591 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.7981 26.4709 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -18.3884 15.7009 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -18.3884 17.3809 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -18.3884 19.1309 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -19.8486 20.4009 0
+  rotation 0 0 1 -1.57075
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -19.849 11.1909 0
+  rotation 0 0 1 1.57075
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -18.3884 14.3009 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -18.3885 12.5909 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.7981 27.2809 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.7967 45.2009 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.7967 44.2709 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.7971 34.6609 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.7971 30.7309 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.7971 33.6809 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.7971 29.9409 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -6.7067 44.2706 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -6.70663 45.2306 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -6.70677 43.3906 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -7.86 44.23 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -7.86 45.19 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -7.86 43.38 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.7967 43.3309 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.7993 -2.1791 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.7993 1.0909 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.7993 1.9909 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.7993 4.3509 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.7993 5.2409 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.7993 -1.3191 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.8002 -12.9191 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -11.8002 -13.8291 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -6.60023 -12.9291 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -6.60023 -13.7891 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 6.71 -8.38 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 3.17 -8.37974 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -0.16 -8.37953 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -3.91 -8.37936 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 5.35 -8.44 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 10.38 -7.56012 0
+  rotation 0 0 1 3.1415
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 14.5907 -5.56079 0
+  rotation 0 0 1 -1.5719353071795865
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 14.593 -2.75079 0
+  rotation 0 0 1 -1.5719353071795865
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 14.5965 0.28921 0
+  rotation 0 0 1 -1.5719353071795865
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 14.5992 3.46921 0
+  rotation 0 0 1 -1.5719353071795865
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 14.6019 6.53921 0
+  rotation 0 0 1 -1.5719353071795865
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 13.5407 -5.5597 0
+  rotation 0 0 1 -1.5719353071795865
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 14.5007 -6.91966 0
+  rotation 0 0 1 1.57075
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 14.5007 -4.20966 0
+  rotation 0 0 1 1.57075
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 14.5007 -1.13966 0
+  rotation 0 0 1 1.57075
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 14.5007 2.07034 0
+  rotation 0 0 1 1.57075
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 14.5007 5.11034 0
+  rotation 0 0 1 1.57075
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 13.5507 -6.91966 0
+  rotation 0 0 1 1.57075
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 13.5507 -4.20966 0
+  rotation 0 0 1 1.57075
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 13.5507 -1.17966 0
+  rotation 0 0 1 1.57075
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 13.5507 2.09034 0
+  rotation 0 0 1 1.57075
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 13.5507 5.16034 0
+  rotation 0 0 1 1.57075
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 13.5431 -2.8397 0
+  rotation 0 0 1 -1.5719353071795865
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 13.5453 0.2903 0
+  rotation 0 0 1 -1.5719353071795865
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 13.5473 3.5003 0
+  rotation 0 0 1 -1.5719353071795865
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 13.5501 6.5203 0
+  rotation 0 0 1 -1.5719353071795865
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 0.9 9.42 0
+  rotation 0 0 1 3.115
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation -1.02 9.42 0
+  name "chair(2)"
+  color 0 0 0
+}
+Chair {
+  translation 9.04 -8.43 0
+  name "chair(1)"
+  color 0 0 0
+}
+Chair {
+  translation 10.36 -8.43 0
+  rotation 0 0 1 3.1415
+  name "chair(3)"
+  color 0 0 0
+}
+TrashBin {
+  translation 10 -3.91002 0
+  rotation 0 0 1 -1.5709353071795862
+  binColor 0.5 0.5 0.5
+}
+TrashBin {
+  translation 0 -3.91002 0
+  rotation 0 0 1 -1.5709353071795862
+  name "trash bin(2)"
+  binColor 0.5 0.5 0.5
+}
+TrashBin {
+  translation -10 -3.91002 0
+  rotation 0 0 1 -1.5709353071795862
+  name "trash bin(1)"
+  binColor 0.5 0.5 0.5
+}
+TrashBin {
+  translation -10.0052 35.03 0
+  rotation 0 0 1 1.57094
+  name "trash bin(3)"
+  binColor 0.5 0.5 0.5
+}
+TrashBin {
+  translation 0.0248 35.0311 0
+  rotation 0 0 1 1.57094
+  name "trash bin(4)"
+  binColor 0.5 0.5 0.5
+}
+TrashBin {
+  translation 11.9848 35.0313 0
+  rotation 0 0 1 1.57094
+  name "trash bin(5)"
+  binColor 0.5 0.5 0.5
+}
+CeilingLight {
+  translation 0 0 5
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 0 3.6 5
+  name "ceiling light(11)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -3 3.6 5
+  name "ceiling light(15)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -6 3.6 5
+  name "ceiling light(16)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -9 3.6 5
+  name "ceiling light(17)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 3.6 5
+  name "ceiling light(18)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 3 3.6 5
+  name "ceiling light(10)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 6 3.6 5
+  name "ceiling light(12)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 3.6 5
+  name "ceiling light(13)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 12 3.6 5
+  name "ceiling light(14)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 12 7.2 5
+  name "ceiling light(37)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 7.2 5
+  name "ceiling light(38)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 6 7.2 5
+  name "ceiling light(39)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 0 7.2 5
+  name "ceiling light(40)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -3 7.2 5
+  name "ceiling light(42)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -6 7.2 5
+  name "ceiling light(43)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -9 7.2 5
+  name "ceiling light(44)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 7.2 5
+  name "ceiling light(45)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 11 5
+  name "ceiling light(46)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 11 5
+  name "ceiling light(47)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -15 11 5
+  name "ceiling light(74)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -21 11 5
+  name "ceiling light(76)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -18 11 5
+  name "ceiling light(81)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -9 11 5
+  name "ceiling light(48)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -6 11 5
+  name "ceiling light(49)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -3 11 5
+  name "ceiling light(50)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 0 15 5
+  name "ceiling light(51)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 3 11 5
+  name "ceiling light(52)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 6 11 5
+  name "ceiling light(53)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 11 5
+  name "ceiling light(54)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 12 11 5
+  name "ceiling light(55)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 12 15 5
+  name "ceiling light(57)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 15 5
+  name "ceiling light(56)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 6 15 5
+  name "ceiling light(59)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 3 15 5
+  name "ceiling light(60)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -3 15 5
+  name "ceiling light(61)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -6 15 5
+  name "ceiling light(66)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -9 15 5
+  name "ceiling light(67)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 15 5
+  name "ceiling light(70)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -15 15 5
+  name "ceiling light(71)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -18 15 5
+  name "ceiling light(72)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -21 15 5
+  name "ceiling light(73)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 19 5
+  name "ceiling light(68)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 23 5
+  name "ceiling light(75)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 26 5
+  name "ceiling light(82)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 29 5
+  name "ceiling light(83)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -9 29 5
+  name "ceiling light(113)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -6 29 5
+  name "ceiling light(114)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -3 29 5
+  name "ceiling light(115)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 0 29 5
+  name "ceiling light(116)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 3 29 5
+  name "ceiling light(118)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 6 29 5
+  name "ceiling light(119)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 29 5
+  name "ceiling light(120)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 12 29 5
+  name "ceiling light(121)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 0 29 5
+  name "ceiling light(117)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 32 5
+  name "ceiling light(84)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -6 32 5
+  name "ceiling light(105)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -3 32 5
+  name "ceiling light(107)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 0 32 5
+  name "ceiling light(108)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 3 32 5
+  name "ceiling light(109)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 6 32 5
+  name "ceiling light(110)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 32 5
+  name "ceiling light(111)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 12 32 5
+  name "ceiling light(112)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -9 32 5
+  name "ceiling light(106)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 35 5
+  name "ceiling light(85)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 38 5
+  name "ceiling light(86)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 42.82 5
+  name "ceiling light(145)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 45.47 5
+  name "ceiling light(146)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -7.36 45.47 5
+  name "ceiling light(147)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -7.36 42.93 5
+  name "ceiling light(148)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -9 38 5
+  name "ceiling light(87)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -6 38 5
+  name "ceiling light(88)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -3 38 5
+  name "ceiling light(89)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 0 38 5
+  name "ceiling light(90)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 3 38 5
+  name "ceiling light(91)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 6 38 5
+  name "ceiling light(92)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 38 5
+  name "ceiling light(93)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 12 38 5
+  name "ceiling light(95)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 12 35 5
+  name "ceiling light(96)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 35 5
+  name "ceiling light(98)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 6 35 5
+  name "ceiling light(99)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 3 35 5
+  name "ceiling light(100)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 0 35 5
+  name "ceiling light(101)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -3 35 5
+  name "ceiling light(102)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -6 35 5
+  name "ceiling light(103)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -9 35 5
+  name "ceiling light(104)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 38 5
+  name "ceiling light(94)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -15 19 5
+  name "ceiling light(78)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -18 19 5
+  name "ceiling light(79)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -21 19 5
+  name "ceiling light(80)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 0 19 5
+  name "ceiling light(77)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 3 19 5
+  name "ceiling light(141)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 6 19 5
+  name "ceiling light(140)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 19 5
+  name "ceiling light(142)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 19 5
+  name "ceiling light(143)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 12 19 5
+  name "ceiling light(144)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -9 19 5
+  name "ceiling light(137)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -6 19 5
+  name "ceiling light(138)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -3 19 5
+  name "ceiling light(139)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -9 23 5
+  name "ceiling light(69)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -6 23 5
+  name "ceiling light(131)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -3 23 5
+  name "ceiling light(132)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 0 23 5
+  name "ceiling light(129)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 3 23 5
+  name "ceiling light(133)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 6 23 5
+  name "ceiling light(134)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 23 5
+  name "ceiling light(135)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 12 23 5
+  name "ceiling light(136)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -9 26 5
+  name "ceiling light(97)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -6 26 5
+  name "ceiling light(122)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -3 26 5
+  name "ceiling light(123)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 0 26 5
+  name "ceiling light(124)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 3 26 5
+  name "ceiling light(125)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 6 26 5
+  name "ceiling light(126)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 26 5
+  name "ceiling light(127)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 26 5
+  name "ceiling light(128)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 12 26 5
+  name "ceiling light(130)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 15 5
+  name "ceiling light(58)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 3 7.2 5
+  name "ceiling light(41)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 0 0 5
+  name "ceiling light(1)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -6 0 5
+  name "ceiling light(6)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -9 0 5
+  name "ceiling light(8)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 0 5
+  name "ceiling light(9)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -3 0 5
+  name "ceiling light(7)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 3 0 5
+  name "ceiling light(2)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 12 0 5
+  name "ceiling light(3)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 12 -3.6 5
+  name "ceiling light(19)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 -3.6 5
+  name "ceiling light(20)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 -7.2 5
+  name "ceiling light(28)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 6 -7.2 5
+  name "ceiling light(30)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 3 -7.2 5
+  name "ceiling light(31)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 0 -7.2 5
+  name "ceiling light(32)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -3 -7.2 5
+  name "ceiling light(33)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -6 -7.2 5
+  name "ceiling light(34)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -9 -7.2 5
+  name "ceiling light(35)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 -7.2 5
+  name "ceiling light(36)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 -11.07 5
+  name "ceiling light(62)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -7.45 -11.07 5
+  name "ceiling light(64)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -7.44 -13.68 5
+  name "ceiling light(65)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 -13.68 5
+  name "ceiling light(63)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 12 -7.2 5
+  name "ceiling light(29)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 6 -3.6 5
+  name "ceiling light(21)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 3 -3.6 5
+  name "ceiling light(22)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 0 -3.6 5
+  name "ceiling light(23)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -3 -3.6 5
+  name "ceiling light(24)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -6 -3.6 5
+  name "ceiling light(25)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -9 -3.6 5
+  name "ceiling light(26)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation -12 -3.6 5
+  name "ceiling light(27)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 6 0 5
+  name "ceiling light(4)"
+  pointLightIntensity 10
+}
+CeilingLight {
+  translation 9 0 5
+  name "ceiling light(5)"
+  pointLightIntensity 10
+}
+Wall {
+  translation 3.36 -9.15 0
+  rotation 0 0 -1 0
+  name "wall outside east wall"
+  size 23.3 0.1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation 3.36 40.4 0
+  rotation 0 0 -1 0
+  name "wall outside east wall(6)"
+  size 23.3 0.1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation 3.36 -9.15 0
+  rotation 0 0 -1 0
+  name "wall outside east wall(5)"
+  size 23.3 0.1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -10.26 -9.15 0
+  rotation 0 0 -1 0
+  name "wall outside east wall(1)"
+  size 2 0.1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -10.26 40.43 0
+  rotation 0 0 -1 0
+  name "wall outside east wall(3)"
+  size 2 0.1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -13.68 -9.15 0
+  rotation 0 0 -1 0
+  name "wall outside east wall(2)"
+  size 2.85 0.1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -13.68 40.43 0
+  rotation 0 0 -1 0
+  name "wall outside east wall(4)"
+  size 2.85 0.1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation 15.15 15.72 0.05
+  name "wall north door  bench"
+  size 0.1 50 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -15.15 -9.71 0
+  rotation 0 0 -1 0
+  name "wall north back wall(1)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -15.15 40.91 0
+  rotation 0 0 -1 0
+  name "wall north back wall(19)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -5.21 40.91 0
+  rotation 0 0 -1 0
+  name "wall north back wall(26)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -15.15 43.9 0
+  rotation 0 0 -1 0
+  name "wall north back wall(20)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -5.21 43.9 0
+  rotation 0 0 -1 0
+  name "wall north back wall(25)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -15.15 47.02 0
+  rotation 0 0 -1 0
+  name "wall north back wall(21)"
+  size 0.1 1.29 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -5.21 47.02 0
+  rotation 0 0 -1 0
+  name "wall north back wall(24)"
+  size 0.1 1.29 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -15.15 39.81 0
+  rotation 0 0 -1 0
+  name "wall north back wall(11)"
+  size 0.1 1.2 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -15.15 -8.69 0
+  rotation 0 0 -1 0
+  name "wall north back wall(15)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -15.15 36.8 0
+  rotation 0 0 -1 0
+  name "wall north back wall(12)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -15.15 -5.67 0
+  rotation 0 0 -1 0
+  name "wall north back wall(16)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -15.15 -2.69 0
+  rotation 0 0 -1 0
+  name "wall north back wall(18)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -15.15 33.71 0
+  rotation 0 0 -1 0
+  name "wall north back wall(13)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -15.15 26.82 0
+  rotation 0 0 -1 0
+  name "wall north back wall(14)"
+  size 0.1 8.7 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -15.15 4.45 0
+  rotation 0 0 -1 0
+  name "wall north back wall(17)"
+  size 0.1 9.3 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -5.21 -9.71 0
+  rotation 0 0 -1 0
+  name "wall north back wall(10)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -14.62 -16.09 0
+  rotation 0 0 -1 1.57075
+  name "wall north back wall(2)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -14.6714 47.81 0
+  rotation 0 0 -1 1.57075
+  name "wall north back wall(22)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -5.67 -16.09 0
+  rotation 0 0 -1 1.57075
+  name "wall north back wall(7)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -5.67 47.8 0
+  rotation 0 0 -1 1.57075
+  name "wall north back wall(23)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -9.62 -16.09 0
+  rotation 0 0 -1 1.57075
+  name "wall north back wall(5)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -9.62 47.8 0
+  rotation 0 0 -1 1.57075
+  name "wall north back wall(4)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -5.21 -15.65 0
+  rotation 0 0 -1 0
+  name "wall north back wall(8)"
+  size 0.1 1 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -5.21 -12.67 0
+  rotation 0 0 -1 0
+  name "wall north back wall(3)"
+  size 0.1 0.92 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation 5.21 -12.67 0
+  rotation 0 0 -1 0
+  name "wall north back wall(9)"
+  size 0.1 0.92 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -9.72 -12.6 0
+  rotation 0 0 -1 0
+  name "wall north back wall(6)"
+  size 0.1 6.85 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Wall {
+  translation -9.72 44.31 0
+  rotation 0 0 -1 0
+  name "wall north back wall(27)"
+  size 0.1 6.85 5
+  appearance PaintedWood {
+    colorOverride 0 0 0
+  }
+}
+Table {
+  translation 9.6829 -7.96244 0.02
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation 9.6829 39.2676 0.02
+  name "table(2)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation 13.9929 -3.45244 0.02
+  rotation 0 0 1 1.57075
+  name "table(6)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation 13.9929 -6.19244 0.02
+  rotation 0 0 1 1.57075
+  name "table(10)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation 13.9929 -0.40244 0.02
+  rotation 0 0 1 1.57075
+  name "table(7)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation 13.9929 -0.40244 0.02
+  rotation 0 0 1 1.57075
+  name "table(11)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation 13.9929 2.78756 0.02
+  rotation 0 0 1 1.57075
+  name "table(8)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation 13.9929 5.83756 0.02
+  rotation 0 0 1 1.57075
+  name "table(9)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation 6.0829 -7.96244 0.02
+  name "table(1)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation 6.0829 39.2576 0.02
+  name "table(2)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation 2.4829 -7.96244 0.02
+  name "table(2)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation 2.4829 39.2476 0.02
+  name "table(2)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation -0.8571 -7.96244 0.02
+  name "table(3)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation -0.8571 39.2376 0.02
+  name "table(2)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation -4.5771 -7.96244 0.02
+  name "table(4)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation -4.5771 39.2076 0.02
+  name "table(2)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation -12.4671 -12.9724 0.02
+  name "table(5)"
+  size 1.2 3 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation -12.4671 44.2076 0.02
+  name "table(2)"
+  size 1.2 3 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation -19.8171 15.8076 0.02
+  name "table(2)"
+  size 2 9 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation -7.3071 -13.0024 0.02
+  name "table(14)"
+  size 1.2 3 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation -7.3071 44.2876 0.02
+  name "table(2)"
+  size 1.2 3 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation -12.4371 -1.77244 0.02
+  name "table(13)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation -12.4371 1.64756 0.02
+  name "table(15)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation -12.4371 4.86756 0.02
+  name "table(16)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation -12.4371 34.2176 0.02
+  name "table(17)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation -12.4371 30.2976 0.02
+  name "table(2)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Table {
+  translation -12.4371 26.8376 0.02
+  name "table(2)"
+  size 1.2 2 1
+  trayAppearance BrushedAluminium {
+  }
+  legAppearance BrushedAluminium {
+  }
+}
+Cabinet {
+  translation 0 5.39421 0
+  rotation 0 0 1 -5.307179586466759e-06
+  name "bookcase"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 0 5.39421 0
+  rotation 0 0 1 3.1415
+  name "bookcase(2)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -2 5.39421 0
+  rotation 0 0 1 3.1415
+  name "bookcase(30)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -2 5.39421 0
+  name "bookcase(44)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -4 5.39421 0
+  rotation 0 0 1 3.1415
+  name "bookcase(31)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -4 5.39421 0
+  name "bookcase(40)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -6 5.39421 0
+  rotation 0 0 1 3.1415
+  name "bookcase(32)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -6 5.39421 0
+  name "bookcase(41)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -8 5.39421 0
+  rotation 0 0 1 3.1415
+  name "bookcase(33)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -8 5.39421 0
+  name "bookcase(42)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -10 5.39421 0
+  rotation 0 0 1 3.1415
+  name "bookcase(34)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -10 5.39421 0
+  name "bookcase(43)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 0 5.39421 0
+  rotation 0 0 1 3.1415
+  name "bookcase(29)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 2 5.39423 0
+  rotation 0 0 1 3.1415
+  name "bookcase(4)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 2 5.39423 0
+  name "bookcase(5)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 4 5.39423 0
+  rotation 0 0 1 3.1415
+  name "bookcase(6)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 4 5.39423 0
+  name "bookcase(7)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 6 5.39423 0
+  name "bookcase(8)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 6 5.39423 0
+  name "bookcase(45)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 8 5.39423 0
+  name "bookcase(10)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 10 5.39423 0
+  name "bookcase(12)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 10 25.7642 0
+  name "bookcase(46)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 12 25.7642 0
+  name "bookcase(90)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 10 32 0
+  name "bookcase(68)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 12 32 0
+  name "bookcase(91)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 10 32 0
+  rotation 0 0 1 3.1415
+  name "bookcase(79)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 12 32 0
+  rotation 0 0 1 3.1415
+  name "bookcase(92)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 8 32 0
+  rotation 0 0 1 3.1415
+  name "bookcase(80)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 6 32 0
+  rotation 0 0 1 3.1415
+  name "bookcase(81)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 4 32 0
+  rotation 0 0 1 3.1415
+  name "bookcase(82)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 2 32 0
+  rotation 0 0 1 3.1415
+  name "bookcase(83)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 0 32 0
+  rotation 0 0 1 3.1415
+  name "bookcase(84)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -2 32 0
+  rotation 0 0 1 3.1415
+  name "bookcase(85)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -4 32 0
+  rotation 0 0 1 3.1415
+  name "bookcase(86)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -6 32 0
+  rotation 0 0 1 3.1415
+  name "bookcase(87)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -8 32 0
+  rotation 0 0 1 3.1415
+  name "bookcase(88)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -10 32 0
+  rotation 0 0 1 3.1415
+  name "bookcase(89)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 8 32 0
+  name "bookcase(69)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 6 32 0
+  name "bookcase(70)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 4 32 0
+  name "bookcase(71)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 2 32 0
+  name "bookcase(72)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 0 32 0
+  name "bookcase(73)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -2 32 0
+  name "bookcase(74)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -4 32 0
+  name "bookcase(75)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -6 32 0
+  name "bookcase(76)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -8 32 0
+  name "bookcase(77)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -10 32 0
+  name "bookcase(78)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 8 25.7642 0
+  name "bookcase(48)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 6 25.7642 0
+  name "bookcase(49)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 4 25.7642 0
+  name "bookcase(50)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 2 25.7642 0
+  name "bookcase(51)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 0 25.7642 0
+  name "bookcase(52)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -2 25.7642 0
+  name "bookcase(53)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -4 25.7642 0
+  name "bookcase(54)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -6 25.7642 0
+  name "bookcase(55)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -8 25.7642 0
+  name "bookcase(56)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -10 25.7642 0
+  name "bookcase(57)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 10 25.7642 0
+  rotation 0 0 1 3.1415
+  name "bookcase(47)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 12 25.7642 0
+  rotation 0 0 1 3.1415
+  name "bookcase(93)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 8 25.7642 0
+  rotation 0 0 1 3.1415
+  name "bookcase(58)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 6 25.7642 0
+  rotation 0 0 1 3.1415
+  name "bookcase(59)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 4 25.7642 0
+  rotation 0 0 1 3.1415
+  name "bookcase(60)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 2 25.7642 0
+  rotation 0 0 1 3.1415
+  name "bookcase(61)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 0 25.7642 0
+  rotation 0 0 1 3.1415
+  name "bookcase(62)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -2 25.7642 0
+  rotation 0 0 1 3.1415
+  name "bookcase(63)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -4 25.7642 0
+  rotation 0 0 1 3.1415
+  name "bookcase(64)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -6 25.7642 0
+  rotation 0 0 1 3.1415
+  name "bookcase(65)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -8 25.7642 0
+  rotation 0 0 1 3.1415
+  name "bookcase(66)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -10 25.7642 0
+  rotation 0 0 1 3.1415
+  name "bookcase(67)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 10 5.39423 0
+  rotation 0 0 1 3.1415
+  name "bookcase(13)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 8 5.39423 0
+  rotation 0 0 1 3.1415
+  name "bookcase(11)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 6 5.39423 0
+  rotation 0 0 1 3.1415
+  name "bookcase(9)"
+  depth 0.48
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -2.34025e-05 -0.91579 0
+  rotation 0 0 1 -5.307179586466759e-06
+  name "bookcase(1)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 4 -0.915791 0
+  rotation 0 0 1 3.1415
+  name "bookcase(14)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 4 -0.91579 0
+  rotation 0 0 1 -5.307179586466759e-06
+  name "bookcase(16)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 6 -0.91579 0
+  rotation 0 0 1 -5.307179586466759e-06
+  name "bookcase(17)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 8 -0.91579 0
+  rotation 0 0 1 -5.307179586466759e-06
+  name "bookcase(20)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 10 -0.91579 0
+  rotation 0 0 1 3.1415
+  name "bookcase(22)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 10 -0.91579 0
+  rotation 0 0 1 -5.307179586466759e-06
+  name "bookcase(23)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 8 -0.91579 0
+  rotation 0 0 1 3.1415
+  name "bookcase(21)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 6 -0.91579 0
+  rotation 0 0 1 3.1415
+  name "bookcase(18)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 2 -0.91579 0
+  rotation 0 0 1 3.1415
+  name "bookcase(15)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation 2 -0.91579 0
+  name "bookcase(19)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -2.34025e-05 -0.91579 0
+  rotation 0 0 1 3.1415
+  name "bookcase(3)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -2 -0.91579 0
+  rotation 0 0 1 3.1415
+  name "bookcase(24)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -2 -0.91579 0
+  name "bookcase(35)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -4 -0.91579 0
+  rotation 0 0 1 3.1415
+  name "bookcase(25)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -4 -0.91579 0
+  name "bookcase(36)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -6 -0.91579 0
+  rotation 0 0 1 3.1415
+  name "bookcase(26)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -6 -0.91579 0
+  name "bookcase(37)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -8 -0.91579 0
+  rotation 0 0 1 3.1415
+  name "bookcase(27)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -8 -0.91579 0
+  name "bookcase(38)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -10 -0.91579 0
+  rotation 0 0 1 3.1415
+  name "bookcase(28)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Cabinet {
+  translation -10 -0.91579 0
+  name "bookcase(39)"
+  depth 0.41
+  rowsHeights [
+    0.4, 0.4, 0.4, 0.4, 0.4, 0.4
+  ]
+  columnsWidths [
+    5
+  ]
+  layout [
+    "Shelf  (1, 2, 1, 0)"
+    "Shelf  (1, 4, 1, 0)"
+    "Shelf  (1, 3, 1, 0)"
+    "Shelf  (1, 5, 1, 0)"
+    "Shelf  (1, 6, 1, 0)"
+  ]
+  primaryAppearance PaintedWood {
+    colorOverride 0.2 0.2 0.2
+  }
+}
+Window {
+  translation -15.2 -11.22 0
+  rotation 0 0 1 3.14159
+  name "window 1(1)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -15.2 42.4 0
+  rotation 0 0 1 3.14159
+  name "window 1(30)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -5.21 42.4 0
+  rotation 0 0 1 3.14159
+  name "window 1(37)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -15.2 38.34 0
+  rotation 0 0 1 3.14159
+  name "window 1(19)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -15.2 -7.17 0
+  rotation 0 0 1 3.14159
+  name "window 1(2)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -15.2 35.31 0
+  rotation 0 0 1 3.14159
+  name "window 1(24)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -15.2 32.17 0
+  rotation 0 0 1 3.14159
+  name "window 1(25)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -15.2 -4.19 0
+  rotation 0 0 1 3.14159
+  name "window 1(28)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -15.2 -1.19 0
+  rotation 0 0 1 3.14159
+  name "window 1(29)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -15.2 11.9 0
+  rotation 0 0 1 3.14159
+  name "window 1(26)"
+  size 0.1 5.5 5
+  bottomWallHeight 0.1
+  windowHeight 4.8
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -15.2 19.61 0
+  rotation 0 0 1 3.14159
+  name "window 1(27)"
+  size 0.1 5.5 5
+  bottomWallHeight 0.1
+  windowHeight 4.8
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -23.12 10.82 0
+  rotation 0 0 1 3.14159
+  name "window 1(20)"
+  size 0.1 3.35 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -23.12 14.17 0
+  rotation 0 0 1 3.14159
+  name "window 1(21)"
+  size 0.1 3.35 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -23.12 17.46 0
+  rotation 0 0 1 3.14159
+  name "window 1(22)"
+  size 0.1 3.35 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -23.12 20.75 0
+  rotation 0 0 1 3.14159
+  name "window 1(23)"
+  size 0.1 3.35 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -5.21 -11.22 0
+  rotation 0 0 1 3.14159
+  name "window 1(10)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -5.21 -14.13 0
+  rotation 0 0 1 3.14159
+  name "window 1(4)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -15.2 -14.15 0
+  rotation 0 0 1 3.14159
+  name "window 1(3)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -15.2 45.35 0
+  rotation 0 0 1 3.14159
+  name "window 1(31)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -5.21 45.35 0
+  rotation 0 0 1 3.14159
+  name "window 1(36)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -16.2 9.08 0
+  rotation 0 0 -1 1.5708
+  name "window 1(5)"
+  size 0.1 2.1 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -16.2 22.44 0
+  rotation 0 0 -1 -1.5708
+  name "window 1(15)"
+  size 0.1 2.1 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -18.27 9.08 0
+  rotation 0 0 -1 1.5708
+  name "window 1(12)"
+  size 0.1 2.1 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -18.27 22.4 0
+  rotation 0 0 -1 -1.5708
+  name "window 1(16)"
+  size 0.1 2.1 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -20.33 9.08 0
+  rotation 0 0 -1 1.5708
+  name "window 1(13)"
+  size 0.1 2.1 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -20.33 22.4 0
+  rotation 0 0 -1 -1.5708
+  name "window 1(17)"
+  size 0.1 2.1 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -22.25 9.08 0
+  rotation 0 0 -1 1.5708
+  name "window 1(14)"
+  size 0.1 1.8 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -22.25 22.4 0
+  rotation 0 0 -1 -1.5708
+  name "window 1(18)"
+  size 0.1 1.8 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -11.13 -16.11 0
+  rotation 0 0 -1 1.5708
+  name "window 1(6)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -11.13 47.8 0
+  rotation 0 0 -1 1.5708
+  name "window 1(33)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -13.14 -16.11 0
+  rotation 0 0 -1 1.5708
+  name "window 1(11)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -13.14 47.8 0
+  rotation 0 0 -1 1.5708
+  name "window 1(32)"
+  size 0.1 2 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -8.38 -16.11 0
+  rotation 0 0 -1 1.5708
+  name "window 1(7)"
+  size 0.1 1.47 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -8.38 47.8 0
+  rotation 0 0 -1 1.5708
+  name "window 1(34)"
+  size 0.1 1.47 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -6.92 -16.11 0
+  rotation 0 0 -1 1.5708
+  name "window 1(8)"
+  size 0.1 1.47 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Window {
+  translation -6.92 47.8 0
+  rotation 0 0 -1 1.5708
+  name "window 1(35)"
+  size 0.1 1.47 5
+  bottomWallHeight 0.5
+  windowHeight 4.2
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance BrushedAluminium {
+  }
+}
+Robot {
+  translation 0 15.03 0
+  name "Ros2Supervisor"
+  controller "<extern>"
+  supervisor TRUE
+}
+SolidBox {
+  translation 0 9.42 1.04
+  name "box(1)"
+  size 0.1 1 0.6
+  appearance PBRAppearance {
+    baseColor 0 0 0
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/worlds/textures/tagged_wall.jpg"
+      ]
+    }
+    roughness 0.5
+    metalness 0
+  }
+}
+Door {
+  translation -8.76 -9.15 0
+  rotation 0 0 1 1.57
+  size 0.1 1 5
+  doorAppearance GenericDoorAppearance {
+    colorOverride 0.4 0.4 0.4
+  }
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance VarnishedPine {
+    colorOverride 0.4 0.4 0.4
+  }
+}
+Door {
+  translation -8.76 40.43 0
+  rotation 0 0 1 1.57
+  name "door(3)"
+  size 0.1 1 5
+  doorAppearance GenericDoorAppearance {
+    colorOverride 0.4 0.4 0.4
+  }
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance VarnishedPine {
+    colorOverride 0.4 0.4 0.4
+  }
+}
+Door {
+  translation -11.76 -9.14731 0
+  rotation 0 0 1 1.57
+  name "door(1)"
+  size 0.1 1 5
+  doorAppearance GenericDoorAppearance {
+    colorOverride 0.4 0.4 0.4
+  }
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance VarnishedPine {
+    colorOverride 0.4 0.4 0.4
+  }
+}
+Door {
+  translation -11.76 40.43 0
+  rotation 0 0 1 1.57
+  name "door(2)"
+  size 0.1 1 5
+  doorAppearance GenericDoorAppearance {
+    colorOverride 0.4 0.4 0.4
+  }
+  wallAppearance Roughcast {
+    colorOverride 0 0 0
+  }
+  frameAppearance VarnishedPine {
+    colorOverride 0.4 0.4 0.4
+  }
+}
